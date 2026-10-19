@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amna Zafar — Front-End Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--bg:#030006;--ink:#eef1ff;--muted:#a3abcc;--glass:rgba(255,255,255,.055);--line:rgba(255,255,255,.13);--a:#8b5cf6;--b:#22d3ee;--c:#f472b6;--grad:linear-gradient(120deg,var(--a),var(--b) 55%,var(--c));
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;margin:0;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--b);outline-offset:3px;border-radius:6px}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--grad);z-index:20;box-shadow:0 0 14px var(--b)}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(1100px 700px at 85% -10%,rgba(126,34,206,.38),transparent),radial-gradient(900px 600px at -10% 45%,rgba(88,28,135,.35),transparent),radial-gradient(800px 600px at 60% 110%,rgba(147,51,234,.25),transparent),linear-gradient(180deg,#07000f,#000)}
+.bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:60px 60px;opacity:.3;-webkit-mask-image:radial-gradient(circle at 50% 35%,#000,transparent 72%);mask-image:radial-gradient(circle at 50% 35%,#000,transparent 72%)}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;will-change:transform}
+.blob i{display:block;width:100%;height:100%;border-radius:50%;background:inherit;animation:float 14s ease-in-out infinite}
+.b1{width:440px;height:440px;background:var(--a);top:-100px;left:-100px}
+.b2{width:400px;height:400px;background:#6d28d9;top:38%;right:-120px}.b2 i{animation-delay:-5s}
+.b3{width:360px;height:360px;background:#7e22ce;bottom:-120px;left:28%}.b3 i{animation-delay:-9s}
+@keyframes float{50%{transform:translate(70px,-60px) scale(1.2)}}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(3,0,8,.6);border-bottom:1px solid var(--line);transition:background .3s}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:66px;flex-wrap:wrap}
+.logo{font:700 1.3rem "Space Grotesk",sans-serif;text-decoration:none}
+.gt,.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 200%;animation:shift 7s ease infinite}
+@keyframes shift{50%{background-position:100% 50%}}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.94rem;padding:6px 13px;border-radius:99px;transition:.25s}
+nav a:hover,nav a.on{color:#fff;background:var(--glass);box-shadow:inset 0 0 0 1px var(--line)}
+.hero{min-height:calc(100vh - 66px);display:flex;align-items:center;padding:56px 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--glass);border-radius:99px;padding:6px 14px;font-size:.88rem;color:var(--muted);margin-bottom:22px}
+.badge i{width:8px;height:8px;border-radius:50%;background:#34d399;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #34d399}70%,100%{box-shadow:0 0 0 10px transparent}}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);letter-spacing:-.03em}
+.type{color:var(--muted);font:500 1.3rem "Space Grotesk",sans-serif;margin:18px 0 6px;min-height:1.9rem}
+.type b{display:inline-block;width:2px;height:1.2em;background:var(--b);vertical-align:-3px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{color:var(--muted);max-width:52ch;margin:10px 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.btn.primary{background:var(--grad);color:#fff;border:0;box-shadow:0 10px 30px -8px rgba(139,92,246,.75)}
+.btn.ghost{background:var(--glass)}
+.btn:hover{transform:translateY(-3px)}
+.code{background:rgba(8,12,30,.8);color:#d7e3f4;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 70px -20px rgba(139,92,246,.45);animation:bob 6s ease-in-out infinite;overflow:hidden}
+@keyframes bob{50%{transform:translateY(-14px)}}
+.dots{display:flex;gap:7px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.dots i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
+.code pre{margin:0;padding:20px;font:.86rem/1.75 ui-monospace,Menlo,Consolas,monospace;overflow-x:auto}
+.k{color:#c4b5fd}.s{color:#86efd8}.m{color:#7d8ab0}
+.strip{overflow:hidden;border-block:1px solid var(--line);background:var(--glass);padding:16px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.strip div{display:flex;gap:48px;width:max-content;animation:scroll 22s linear infinite;font:700 1.3rem "Space Grotesk",sans-serif;color:var(--muted)}
+.strip span::before{content:"✦";color:var(--b);margin-right:48px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+section{padding:90px 0}
+.head{margin-bottom:38px}
+.head h2{font-size:clamp(1.9rem,4.2vw,2.8rem)}
+.head h2::after{content:"";display:block;height:4px;width:0;border-radius:9px;background:var(--grad);margin-top:12px;transition:width 1s .35s cubic-bezier(.2,.7,.2,1)}
+.head.in h2::after{width:84px}
+.head p{color:var(--muted);margin:12px 0 0;max-width:58ch}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.about .glass{padding:32px}
+.about p{margin:0 0 14px;color:var(--muted)}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px}
+.stats strong{display:block;font:700 2.2rem "Space Grotesk",sans-serif}
+.stats span{color:var(--muted);font-size:.9rem}
+.skill{margin-bottom:16px}
+.skill div{font-weight:600;font-size:.95rem;margin-bottom:6px}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:var(--grad);border-radius:99px;transition:width 1.6s .3s cubic-bezier(.2,.8,.2,1)}
+.in .bar span{width:var(--w)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{padding:28px}
+.card:hover{border-color:var(--a);box-shadow:0 24px 50px -20px rgba(139,92,246,.65)}
+.card h3{font-size:1.3rem;margin:14px 0 8px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:.96rem}
+.ico{width:50px;height:50px;border-radius:14px;background:var(--grad);display:grid;place-items:center;font-size:1.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tags span{font-size:.78rem;font-weight:600;padding:4px 11px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.links a{font-weight:600;font-size:.92rem;margin-right:12px;text-decoration:none;padding:7px 16px;border-radius:99px;border:1px solid var(--line);display:inline-block;transition:.25s}
+.links a:first-child{background:var(--grad);border:0;color:#fff}
+.links a:hover{transform:translateY(-2px)}
+.cta{padding:52px 28px;text-align:center;background:linear-gradient(135deg,rgba(139,92,246,.3),rgba(34,211,238,.18),rgba(244,114,182,.24))}
+.cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px}
+.cta p{color:var(--muted);margin:0 0 26px}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:.94rem;background:var(--glass)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer div{display:flex;gap:12px;flex-wrap:wrap}
+footer a{text-decoration:none;border:1px solid var(--line);padding:8px 16px;border-radius:99px;transition:.25s}
+footer a:hover{background:var(--grad);color:#fff;border-color:transparent}
+#top-btn{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:0;background:var(--grad);color:#fff;font-size:1.3rem;cursor:pointer;opacity:0;transform:translateY(20px);pointer-events:none;transition:.35s;z-index:15}
+#top-btn.show{opacity:1;transform:none;pointer-events:auto}
+.js .rv{opacity:0;transform:translateY(60px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rl{transform:translateX(-90px)}.js .rr{transform:translateX(90px)}.js .rz{transform:scale(.82)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.done{transition:transform .35s,border-color .35s,box-shadow .35s;transition-delay:0s}
+.js .card.rv.in:hover{transform:translateY(-8px)}
+@media (max-width:780px){.hero .wrap,.about{grid-template-columns:1fr}.hero{min-height:0;padding:40px 0}section{padding:60px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.bar span{width:var(--w)}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div class="bg" aria-hidden="true"><canvas id="cv"></canvas><div class="blob b1"><i></i></div><div class="blob b2"><i></i></div><div class="blob b3"><i></i></div></div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Amna<span> Zafar</span></a>
+    <nav aria-label="Main"><a href="#about">About</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="rv rl">
+        <div class="badge"><i></i>Certified and open to work</div>
+        <h1>Hi, I’m <span class="gt">Amna Zafar</span>.<br>I build modern websites.</h1>
+        <div class="type"><span id="t"></span><b></b></div>
+        <p>A front-end developer who turns ideas into fast, responsive and good-looking web apps with React, Tailwind CSS and Supabase.</p>
+        <div class="btns"><a class="btn primary" href="#projects">View my work</a><a class="btn ghost" href="#contact">Contact me</a></div>
+      </div>
+      <div class="code rv rr" style="--d:.2s" aria-hidden="true">
+        <div class="dots"><i></i><i></i><i></i></div>
+<pre><span class="m">// amna.js</span>
+<span class="k">const</span> me = {
+  role: <span class="s">"Front-End Developer"</span>,
+  stack: [<span class="s">"React"</span>, <span class="s">"Tailwind"</span>,
+          <span class="s">"Supabase"</span>],
+  certified: <span class="k">true</span>,
+  openToWork: <span class="k">true</span>
+};</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip" aria-hidden="true"><div><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Tailwind CSS</span><span>Supabase</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Tailwind CSS</span><span>Supabase</span></div></div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head rv"><h2>About me</h2><p>A year of learning by building.</p></div>
+      <div class="about">
+        <div class="glass rv rl">
+          <p>I spent a year learning front-end development by building real projects, from a weather app to a recipe site. I enjoy turning a plain idea into a clean interface that works well on every screen.</p>
+          <p>Alongside my course I built 16+ projects and completed two internships, which gave me hands-on experience with real work. Now I have completed my certification and I’m ready to join a team or take on freelance work. I care about tidy code, smooth interactions and finishing what I start.</p>
+          <div class="stats">
+            <div><strong data-n="1">0</strong><span>year of training</span></div>
+            <div><strong data-n="16" data-s="+">0</strong><span>projects built</span></div>
+            <div><strong data-n="2">0</strong><span>internships</span></div>
+            <div><strong data-n="6">0</strong><span>core skills</span></div>
+          </div>
+        </div>
+        <div class="glass rv rr" id="skills" style="padding:32px">
+          <div class="skill"><div>HTML</div><div class="bar"><span style="--w:92%"></span></div></div>
+          <div class="skill"><div>CSS</div><div class="bar"><span style="--w:90%"></span></div></div>
+          <div class="skill"><div>JavaScript</div><div class="bar"><span style="--w:82%"></span></div></div>
+          <div class="skill"><div>React</div><div class="bar"><span style="--w:80%"></span></div></div>
+          <div class="skill"><div>Tailwind CSS</div><div class="bar"><span style="--w:88%"></span></div></div>
+          <div class="skill" style="margin:0"><div>Supabase</div><div class="bar"><span style="--w:72%"></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="head rv"><h2>Featured projects</h2><p>Three highlights from the 16+ projects I have built. More are on my GitHub.</p></div>
+      <div class="grid">
+        <article class="glass card rv rz"><div class="ico">🌤️</div><h3>Weather App</h3><p>Search any city and see live conditions and the forecast in a clean, responsive layout.</p><div class="tags"><span>JavaScript</span><span>API</span><span>CSS</span></div><div class="links"><a href="https://weather-api-zeta-two.vercel.app/" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/Amna-Zafar7/Weather-API" target="_blank" rel="noopener">Code</a></div></article>
+        <article class="glass card rv rz" style="--d:.15s"><div class="ico">🍲</div><h3>Recipe Website</h3><p>Browse recipes by category and open full ingredients and cooking steps on a readable page.</p><div class="tags"><span>React</span><span>Tailwind</span></div><div class="links"><a href="https://recipe-website-peach-ten.vercel.app/" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/Amna-Zafar7/recipe-website" target="_blank" rel="noopener">Code</a></div></article>
+        <article class="glass card rv rz" style="--d:.3s"><div class="ico">🎓</div><h3>Certify Hub</h3><p>A certificate platform that stores and looks up records through a Supabase backend.</p><div class="tags"><span>React</span><span>Supabase</span></div><div class="links"><a href="https://certifyhub-rho.vercel.app/" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/Amna-Zafar7/Certifyhub" target="_blank" rel="noopener">Code</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head rv"><h2>Services</h2><p>What I can build for you.</p></div>
+      <div class="grid">
+        <div class="glass card rv rl"><div class="ico">📱</div><h3>Responsive websites</h3><p>Pages that look right and load fast on phones, tablets and desktops.</p></div>
+        <div class="glass card rv" style="--d:.12s"><div class="ico">⚛️</div><h3>React web apps</h3><p>Interactive interfaces built from clean, reusable components.</p></div>
+        <div class="glass card rv" style="--d:.24s"><div class="ico">🗄️</div><h3>Supabase integration</h3><p>Sign-in, databases and storage connected to your front end.</p></div>
+        <div class="glass card rv rr" style="--d:.36s"><div class="ico">🎨</div><h3>Design to code</h3><p>I turn your mockups into accurate, polished pages with Tailwind CSS.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="glass cta rv rz">
+        <h2>Let’s build something great</h2>
+        <p>Have a project or a job opening? I’d love to hear from you.</p>
+        <div class="btns" style="justify-content:center">
+          <a class="btn primary" href="mailto:zaryabzayan982@gmail.com">zaryabzayan982@gmail.com</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/amna-zafar-400aa238b/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/Amna-Zafar7" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Amna Zafar. All rights reserved.</span>
+    <div>
+      <a href="mailto:zaryabzayan982@gmail.com">Email</a>
+      <a href="https://github.com/Amna-Zafar7" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/amna-zafar-400aa238b/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<button id="top-btn" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function count(el){var n=+el.dataset.n,sf=el.dataset.s||'',i=0,d=Math.max(40,1200/n);(function s(){i++;el.textContent=i+(i===n?sf:'');if(i<n)setTimeout(s,d)})()}
+  var els=document.querySelectorAll('.rv');
+  function show(el){el.classList.add('in');setTimeout(function(){el.classList.add('done')},1400);el.querySelectorAll('[data-n]').forEach(count)}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+    var links=document.querySelectorAll('nav a');
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{threshold:.35});
+    document.querySelectorAll('section').forEach(function(s){so.observe(s)});
+  } else {els.forEach(show)}
+
+  var prog=document.getElementById('prog'),tb=document.getElementById('top-btn'),blobs=document.querySelectorAll('.blob'),tick=false;
+  function onScroll(){
+    var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    prog.style.width=(h>0?y/h*100:0)+'%';
+    tb.classList.toggle('show',y>500);
+    if(!rm)blobs.forEach(function(b,i){b.style.transform='translateY('+(y*(.12+i*.08)*-1)+'px)'});
+    tick=false;
+  }
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+  tb.onclick=function(){scrollTo({top:0,behavior:rm?'auto':'smooth'})};
+  onScroll();
+
+  var t=document.getElementById('t'),words=['Front-End Developer','React Developer','UI Builder'],w=0,c=0,del=false;
+  if(rm){t.textContent=words[0]}else{(function tk(){
+    var s=words[w];t.textContent=s.slice(0,c);
+    if(!del&&c<s.length){c++;return setTimeout(tk,85)}
+    if(!del){del=true;return setTimeout(tk,1500)}
+    if(c>0){c--;return setTimeout(tk,40)}
+    del=false;w=(w+1)%words.length;setTimeout(tk,300);
+  })()}
+
+  var cv=document.getElementById('cv');
+  if(!rm&&cv.getContext){
+    var x=cv.getContext('2d'),W,H,P=[],mx=-999,my=-999;
+    function size(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=[];var n=Math.min(70,Math.floor(W*H/18000));for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.6+.6})}
+    size();addEventListener('resize',size);
+    addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY},{passive:true});
+    (function draw(){
+      x.clearRect(0,0,W,H);
+      for(var i=0;i<P.length;i++){
+        var p=P[i];p.x+=p.vx;p.y+=p.vy;
+        if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+        x.fillStyle='rgba(221,190,255,.85)';x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();
+        for(var j=i+1;j<P.length;j++){var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){x.strokeStyle='rgba(168,120,255,'+(.2*(1-d/130))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+        var dm=Math.hypot(p.x-mx,p.y-my);if(dm<160){x.strokeStyle='rgba(216,140,255,'+(.5*(1-dm/160))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(mx,my);x.stroke()}
+      }
+      requestAnimationFrame(draw);
+    })();
+  }
+})();
+</script>
+</body>
+</html>
